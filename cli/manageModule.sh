@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # -------------------------------------
-# manageModule.sh – BonaPic CLI Manager (Full Version)
-# Supports: status update, version bump, test, report, cleanup-report, delete, list (with filter)
+# manageModule.sh – BonaPic CLI Manager (Full Version with Backup)
+# Supports: status update, version bump, test, report, cleanup-report, delete, list (with filter), backup
 # -------------------------------------
 
 MODULE_REGISTER="docs/dev/Module_Register.md"
@@ -19,6 +19,7 @@ print_usage() {
   echo "  $0 --report"
   echo "  $0 --cleanup-report"
   echo "  $0 --list [Status]"
+  echo "  $0 --backup"
   exit 1
 }
 
@@ -40,12 +41,27 @@ list_modules() {
     version=$(jq -r --arg s "$sys" '.entries[] | select(.system==$s) | .version' "$VERSIONS_JSON" | tail -1)
     [ -z "$version" ] && version="N/A"
 
-    # Show only if matches filter (or no filter given)
     if [ -z "$FILTER" ] || [ "$status" == "$FILTER" ]; then
       printf "| %-15s | %-35s | %-12s | %-8s |\n" "$sys" "$path" "$status" "$version"
     fi
   done
   echo ""
+  exit 0
+}
+
+# --- Backup Command (Git commit & push) ---
+backup_project() {
+  echo "💾 Starting full project backup..."
+  if [ -x "./cli/init-git-backup.sh" ]; then
+    ./cli/init-git-backup.sh
+    if [ $? -eq 0 ]; then
+      echo "✅ Backup completed successfully via GitHub."
+    else
+      echo "❌ Backup script encountered an error."
+    fi
+  else
+    echo "❌ Backup script (init-git-backup.sh) not found or not executable."
+  fi
   exit 0
 }
 
@@ -104,6 +120,7 @@ case "$1" in
   --report) generate_report ;;
   --cleanup-report) cleanup_report ;;
   --list) list_modules "$2" ;;
+  --backup) backup_project ;;
 esac
 
 SYSTEM_CODE="$1"
