@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# -----------------------------------------
-# test_manageModule.sh – Automated Test Suite with Summary
-# -----------------------------------------
+# -----------------------------------------------------
+# test_manageModule.sh – Full Automated Test Suite (with Auto-backup Verification)
+# -----------------------------------------------------
 
-echo "🔍 Starting automated tests for manageModule.sh..."
+echo "🔍 Starting full test cycle for manageModule.sh (with auto-backup checks)..."
 TODAY=$(date +%Y-%m-%d)
 
 RESULTS=()
@@ -19,16 +19,16 @@ check_step() {
   fi
 }
 
-# Step 1: Initial listing and reports
-echo "1️⃣ Checking initial module list and reports..."
+# Step 1: Initial listings and reports
+echo "1️⃣ Checking module list and generating reports..."
 ./cli/manageModule.sh --list && \
 ./cli/manageModule.sh --list Tested && \
 ./cli/manageModule.sh --report && \
 ./cli/manageModule.sh --cleanup-report
 check_step $? 1
 
-# Step 2: Update status and version for core.folders
-echo "2️⃣ Updating status and bumping version for core.folders..."
+# Step 2: Update status and bump version (should trigger auto-backup)
+echo "2️⃣ Updating status and bumping version (auto-backup expected)..."
 ./cli/manageModule.sh core.folders --status "In Progress" && \
 ./cli/manageModule.sh core.folders --bump-version && \
 ./cli/manageModule.sh --cleanup-report && \
@@ -41,18 +41,23 @@ echo "3️⃣ Running tests for core.folders..."
 ./cli/manageModule.sh --list Tested
 check_step $? 3
 
-# Step 4: Create and delete a temporary module for deletion tests
+# Step 4: Create and delete a temporary module (auto-backup expected)
 echo "4️⃣ Creating and deleting a temporary module (core.temp)..."
 ./cli/createModule.sh core.temp && \
 ./cli/manageModule.sh core.temp --delete && \
 ./cli/manageModule.sh --list
 check_step $? 4
 
-# Step 5: Final reports after all operations
-echo "5️⃣ Generating final reports..."
+# Step 5: Manual backup test
+echo "5️⃣ Running a manual backup test..."
+./cli/manageModule.sh --backup
+check_step $? 5
+
+# Step 6: Final reports
+echo "6️⃣ Generating final reports..."
 ./cli/manageModule.sh --report && \
 ./cli/manageModule.sh --cleanup-report
-check_step $? 5
+check_step $? 6
 
 echo ""
 echo "================= Test Summary ================="
@@ -62,10 +67,10 @@ done
 echo "================================================"
 
 if [ $FAILURES -eq 0 ]; then
-  echo "✅ All steps passed successfully!"
+  echo "✅ All steps passed successfully, including auto-backup triggers!"
 else
   echo "❌ Some steps failed! Failures: $FAILURES"
   exit 1
 fi
 
-echo "📂 Check 'docs/dev/Module_Status_Report.md' and 'docs/dev/Module_Current_Status.md' for results."
+echo "📂 Check 'docs/dev/Module_Status_Report.md' and 'docs/dev/Module_Current_Status.md' for full results."

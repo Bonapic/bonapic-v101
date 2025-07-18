@@ -46,6 +46,16 @@
       "system": "core.temp",
       "version": "0.1.0",
       "createdAt": "2025-07-18"
+    },
+    {
+      "system": "core.folders",
+      "version": "0.1.6",
+      "createdAt": "2025-07-18"
+    },
+    {
+      "system": "core.temp",
+      "version": "0.1.0",
+      "createdAt": "2025-07-18"
     }
   ]
 }
