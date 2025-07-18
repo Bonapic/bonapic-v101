@@ -1,0 +1,4 @@
+# Ignore sensitive and generated files
+.env
+node_modules/
+.DS_Store

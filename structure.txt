@@ -1,0 +1,63 @@
+Folder PATH listing
+Volume serial number is 9C69-D7C5
+C:.
+¦   structure.txt
+¦   
++---data
+¦       FoldersMap.csv
+¦       Identifiers.csv
+¦       MetadataFields.csv
+¦       
++---docs
+¦       architecture.md
+¦       glossary.md
+¦       principles.md
+¦       
++---lib
+¦       README.md
+¦       
++---src
+    +---core
+    ¦       config.gs
+    ¦       constants.gs
+    ¦       logs.gs
+    ¦       main.gs
+    ¦       
+    +---drafts
+    ¦       concept1.gs
+    ¦       notes.txt
+    ¦       
+    +---modules
+    ¦       BonityManager.gs
+    ¦       InstanceShell.gs
+    ¦       LicenseEngine.gs
+    ¦       RightsEngine.gs
+    ¦       
+    +---orphanage
+    ¦       addOrphans.gs
+    ¦       findOrphans.gs
+    ¦       maintenance.gs
+    ¦       
+    +---services
+    ¦       BackupService.gs
+    ¦       Dispatcher.gs
+    ¦       FolderService.gs
+    ¦       
+    +---sync
+    ¦       sync.gs
+    ¦       syncUtils.gs
+    ¦       
+    +---templates
+    ¦       templateConstants.gs
+    ¦       templateUtils.gs
+    ¦       
+    +---tests
+    ¦       test_config.gs
+    ¦       test_sync.gs
+    ¦       test_utils.gs
+    ¦       
+    +---utils
+            dateUtils.gs
+            fileUtils.gs
+            idUtils.gs
+            

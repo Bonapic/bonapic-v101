@@ -1,0 +1,9 @@
+{
+  "systems": [
+    {
+      "system": "core.folders",
+      "path": "src/core/folders.gs",
+      "status": "Tested"
+    }
+  ]
+}
