@@ -1,4 +1,30 @@
 # Ignore sensitive and generated files
 .env
+.env.template
+
+# Logs & Snapshots
+snapshots/
+logs/
+
+# Templates & Generated Content
+module-templates/
+templateModule.*
+templateTest.*
+
+# System Files & Metadata
+systemIndex.json
+versions.json
+structure.txt
+notes.txt
+
+# Node & Build Output
 node_modules/
 .DS_Store
+
+# Git & IDE Metadata
+.git/
+.gitignore
+.vscode/
+# Dev Tools
+.clasp.json
+cli/snapshot.sh

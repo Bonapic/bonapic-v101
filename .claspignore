@@ -1,0 +1,32 @@
+# Environment & Secrets
+
+.env
+.env.template
+
+# Logs & Snapshots
+
+snapshots/
+logs/
+
+# Templates & Drafts
+
+module-templates/
+structure.txt
+notes.txt
+
+# Build & System Files
+
+systemIndex.json
+versions.json
+node_modules/
+
+# Local Dev Files
+
+README.md
+.vscode/
+.git/
+.gitignore
+
+# Dev Tools
+.clasp.json
+cli/snapshot.sh
