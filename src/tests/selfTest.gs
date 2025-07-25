@@ -1,3 +1,4 @@
+/* eslint-disable no-undef, no-unused-vars */
 // selfTest.gs – check env config + minimal sanity
 
 function test_envConfig() {

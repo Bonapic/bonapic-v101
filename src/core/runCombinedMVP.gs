@@ -1,11 +1,11 @@
-/* eslint-disable no-undef, no-unused-vars */
+/* eslint-disable no-unused-vars */
 /**
- * FolderBuilder.gs – Full MVP Version (FoldersMap_Clean_MVP)
+ * FolderBuilder.gs – Full MVP Version (Updated)
  * - Requires only essential fields (folder_id, folder_name, system_tag, rbac_role)
  * - Creates all folders under BonaPic root
  * - Automatically generates subfolders (/Working, /Deliverables, /Logs, /ArchiveLink)
  * - Updates only existing columns in FoldersMap (created, created_at, folder_url, etc.)
- * - Includes all helper functions (getFoldersMapData, getOrCreateRootFolder, saveFolderBuilderSummary, etc.)
+ * - Includes all helper functions including validateDriveFolder.
  */
 
 function runFolderBuilderMVP() {
@@ -172,4 +172,17 @@ function updateFoldersMapRowSafe(sheetId, sheetName, folderId, updates) {
   });
 
   sheet.getRange(rowIndex + 2, 1, 1, headers.length).setValues([fullRow]);
+}
+
+/**
+ * Validate if a Google Drive folder URL points to an existing folder.
+ */
+function validateDriveFolder(url) {
+  try {
+    const id = url.split("/").pop();
+    DriveApp.getFolderById(id); // Throws if invalid
+    return true;
+  } catch (e) {
+    return false;
+  }
 }

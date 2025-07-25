@@ -1,0 +1,94 @@
+.
+|-- README.md
+|-- appsscript.json
+|-- cli
+|   |-- checkStructure.sh
+|   |-- cleanup-and-report.sh
+|   |-- createModule.sh
+|   |-- init-env.sh
+|   |-- init-git-backup.sh
+|   |-- manageModule.sh
+|   |-- save-dev-summary.sh
+|   |-- setup-docs.sh
+|   |-- snapshot.sh
+|   |-- snapshots
+|   |   |-- project_snapshot_2025-07-24_10-32-01.json
+|   |   |-- project_snapshot_2025-07-24_10-32-01.txt
+|   |   |-- project_snapshot_2025-07-24_11-36-46.json
+|   |   `-- project_snapshot_2025-07-24_11-36-46.txt
+|   |-- test_all.sh
+|   `-- test_manageModule.sh
+|-- data
+|   |-- FoldersMap.csv
+|   |-- Identifiers.csv
+|   `-- MetadataFields.csv
+|-- docs
+|   |-- architecture.md
+|   |-- dev
+|   |   |-- Module_Current_Status.md
+|   |   |-- Module_Register.md
+|   |   |-- Module_Status_Report.md
+|   |   |-- Test_Report.md
+|   |   |-- dev_environment_blueprint.md
+|   |   |-- dev_environment_summary.md
+|   |   `-- platform_systems_principles.md
+|   |-- glossary.md
+|   |-- modules
+|   |   `-- core.folders.md
+|   `-- principles.md
+|-- lib
+|   `-- README.md
+|-- module-templates
+|   |-- templateDoc.md
+|   |-- templateModule.txt
+|   `-- templateTest.txt
+|-- project_tree.txt
+|-- src
+|   |-- core
+|   |   |-- FolderBuilder.gs
+|   |   |-- config.gs
+|   |   |-- constants.gs
+|   |   |-- envConfig.gs
+|   |   |-- folders.gs
+|   |   |-- logs.gs
+|   |   |-- main.gs
+|   |   |-- runCombinedMVP.gs
+|   |   `-- syncFoldersMap.gs
+|   |-- drafts
+|   |   |-- concept1.gs
+|   |   `-- notes.txt
+|   |-- modules
+|   |   |-- BonityManager.gs
+|   |   |-- InstanceShell.gs
+|   |   |-- LicenseEngine.gs
+|   |   `-- RightsEngine.gs
+|   |-- orphanage
+|   |   |-- addOrphans.gs
+|   |   |-- findOrphans.gs
+|   |   `-- maintenance.gs
+|   |-- services
+|   |   |-- BackupService.gs
+|   |   |-- Dispatcher.gs
+|   |   `-- FolderService.gs
+|   |-- sync
+|   |   |-- sync.gs
+|   |   `-- syncUtils.gs
+|   |-- templates
+|   |   |-- templateConstants.gs
+|   |   `-- templateUtils.gs
+|   |-- tests
+|   |   |-- selfTest.gs
+|   |   |-- test_config.gs
+|   |   |-- test_core.folders.gs
+|   |   |-- test_folders.gs
+|   |   |-- test_sync.gs
+|   |   `-- test_utils.gs
+|   `-- utils
+|       |-- dateUtils.gs
+|       |-- fileUtils.gs
+|       `-- idUtils.gs
+|-- structure.txt
+|-- systemIndex.json
+`-- versions.json
+
+18 directories, 73 files

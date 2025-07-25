@@ -1,0 +1,88 @@
+{
+  "timestamp": "Thu, Jul 24, 2025 10:32:03 AM",
+  "folder_structure": "",
+  "git_status": "On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use \"git add/rm <file>...\" to update what will be committed)
+  (use \"git restore <file>...\" to discard changes in working directory)
+	modified:   ../docs/dev/Module_Status_Report.md
+	deleted:    ../module-templates/templateModule.gs
+	deleted:    ../module-templates/templateTest.gs
+
+Untracked files:
+  (use \"git add <file>...\" to include in what will be committed)
+	../.clasp.json
+	../appsscript.json
+	snapshot.sh
+	snapshots/
+	../module-templates/templateModule.txt
+	../module-templates/templateTest.txt
+	../src/core/FolderBuilder.gs
+	../src/core/syncFoldersMap.gs
+
+no changes added to commit (use \"git add\" and/or \"git commit -a\")",
+  "clasp_status": "Tracked files:
+└─ ..\appsscript.json
+└─ ..\src\core\config.gs
+└─ ..\src\core\constants.gs
+└─ ..\src\core\envConfig.gs
+└─ ..\src\core\FolderBuilder.gs
+└─ ..\src\core\folders.gs
+└─ ..\src\core\logs.gs
+└─ ..\src\core\main.gs
+└─ ..\src\core\syncFoldersMap.gs
+└─ ..\src\drafts\concept1.gs
+└─ ..\src\modules\BonityManager.gs
+└─ ..\src\modules\InstanceShell.gs
+└─ ..\src\modules\LicenseEngine.gs
+└─ ..\src\modules\RightsEngine.gs
+└─ ..\src\orphanage\addOrphans.gs
+└─ ..\src\orphanage\findOrphans.gs
+└─ ..\src\orphanage\maintenance.gs
+└─ ..\src\services\BackupService.gs
+└─ ..\src\services\Dispatcher.gs
+└─ ..\src\services\FolderService.gs
+└─ ..\src\sync\sync.gs
+└─ ..\src\sync\syncUtils.gs
+└─ ..\src\templates\templateConstants.gs
+└─ ..\src\templates\templateUtils.gs
+└─ ..\src\tests\selfTest.gs
+└─ ..\src\tests\test_config.gs
+└─ ..\src\tests\test_core.folders.gs
+└─ ..\src\tests\test_folders.gs
+└─ ..\src\tests\test_sync.gs
+└─ ..\src\tests\test_utils.gs
+└─ ..\src\utils\dateUtils.gs
+└─ ..\src\utils\fileUtils.gs
+└─ ..\src\utils\idUtils.gs
+Untracked files:
+└─ ..\.clasp.json
+└─ ..\.env
+└─ ..\.env.template
+└─ ..\.eslintrc.json
+└─ ..\.git\
+└─ ..\.gitignore
+└─ ..\data\
+└─ ..\docs\
+└─ ..\lib\
+└─ ..\module-templates\
+└─ ..\README.md
+└─ ..\src\drafts\notes.txt
+└─ ..\structure.txt
+└─ ..\systemIndex.json
+└─ ..\versions.json
+└─ checkStructure.sh
+└─ cleanup-and-report.sh
+└─ createModule.sh
+└─ init-env.sh
+└─ init-git-backup.sh
+└─ manageModule.sh
+└─ save-dev-summary.sh
+└─ setup-docs.sh
+└─ snapshot.sh
+└─ snapshots\
+└─ test_all.sh
+└─ test_manageModule.sh"
+}

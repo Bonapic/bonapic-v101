@@ -1,0 +1,30 @@
+# Sensitive and local configuration
+.env
+.env.template
+
+# Development tools and metadata
+node_modules/
+.DS_Store
+.vscode/
+.git/
+.clasp.json
+
+# Logs & Snapshots
+logs/
+snapshots/
+
+# Templates and test scaffolding
+module-templates/
+templateModule.*
+templateTest.*
+cli/
+
+# System and generated metadata (not needed in release)
+systemIndex.json
+versions.json
+structure.txt
+notes.txt
+
+# Any temporary or debug files
+*.log
+*.tmp

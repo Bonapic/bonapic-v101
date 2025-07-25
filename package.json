@@ -1,0 +1,15 @@
+{
+  "name": "bonapic-v101",
+  "version": "1.0.0",
+  "description": "BonaPic development project",
+  "main": "src/main.gs",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0"
+  }
+}

@@ -1,5 +1,17 @@
 {
-  "env": { "es6": true },
+  "env": {
+    "es6": true,
+    "node": true
+  },
   "extends": "eslint:recommended",
-  "rules": { "semi": ["error", "always"] }
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"]
+  }
 }
